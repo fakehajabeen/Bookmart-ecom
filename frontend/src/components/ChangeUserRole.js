@@ -21,7 +21,7 @@ const ChangeUserRole = ({
     }
 
     const updateUserRole = async() =>{
-        const fetchResponse = await fetch('http://localhost:4000/api/update-user',{
+        const fetchResponse = await fetch('http://localhost:8080/api/update-user',{
             method : "post",
             credentials : 'include',
             headers : {

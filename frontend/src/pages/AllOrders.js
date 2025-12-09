@@ -4,7 +4,7 @@ const AllOrders = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:4000/admin/orders") // Adjust the API URL as needed
+        fetch("http://localhost:8080/admin/orders") // Adjust the API URL as needed
             .then(response => response.json())
             .then(data => setOrders(data))
             .catch(error => console.error("Error fetching orders:", error));

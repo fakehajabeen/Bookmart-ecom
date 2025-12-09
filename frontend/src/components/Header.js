@@ -1,5 +1,5 @@
 import React , { useContext, useState} from 'react'
-import logonew from '../logonew.png'
+import Bookzonee from '../Bookzonee.png'
 import {GrSearch} from 'react-icons/gr';
 import { FaShoppingCart, FaUserCircle } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -61,7 +61,7 @@ console.log("add to cart", context)
   <div className=''>
     
  <Link to="/">
- <img src={logonew} alt="My Description" width={70} height={40} />
+ <img src={Bookzonee} alt="My Description" width={60} height={50} />
  </Link>
   </div>
 
