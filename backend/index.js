@@ -19,12 +19,18 @@ app.use(cors({
 }));
 
 // Connect to MongoDB
-mongoose.connect('mongodb://127.0.0.1/bookstore', {
+// mongoose.connect('mongodb://127.0.0.1/bookstore', {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+// })
+//     .then(() => console.log('Connected to MongoDB'))
+//     .catch(err => console.error('Error connecting to MongoDB:', err));
+mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
-    .then(() => console.log('Connected to MongoDB'))
-    .catch(err => console.error('Error connecting to MongoDB:', err));
+.then(() => console.log('Connected to MongoDB'))
+.catch(err => console.error('Error connecting to MongoDB:', err));
 
 app.use('/api', router);
 
